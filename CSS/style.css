@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+#home{
+    width: 100%;
+    height: 100vh;
+    background-image: url(../Assets/Images/hero\ img.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+.header {
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    top: 0;
+}
+.container {
+    width: 1170px;
+    margin: auto;
+    padding: 20px 0;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.header .container .row{
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.header .container .row span{
+    float: left;
+}
+.header .container .row .navbar ul{
+    list-style: none;
+}
+.header .container .row .navbar ul li{
+    display: inline-block;
+    margin-right: 20px;
+    
+}
+.header .container .row .navbar ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.5s;
+}
+.header .container .row .navbar ul li a:hover{
+    color: RGB(255, 48, 91);
+}
+.header .container .row .logo{
+    margin-right: 20px;
+}
+.header .container .row .logo a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+}
