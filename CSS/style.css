@@ -418,7 +418,56 @@ padding-bottom: 25px;
     font-size: 16px;
     font-weight: 400;
 }
-#portfolio-grid img{
-border: #fff 5px solid;
-
+#portfolio-grid .items-img {
+    text-align: center;
+    margin: auto;
+    overflow: auto; /* لإحتواء العناصر العائمة */
 }
+
+#portfolio-grid .items-img div .portfolio{
+    width: 33.3333%; /* أكثر دقة من 33% */
+    float: left;
+    padding: 13px;
+    position: relative;
+    box-sizing: border-box; /* لحساب البادينج ضمن العرض */
+}
+
+#portfolio-grid .items-img div img {
+    display: block; /* لإزالة المسافات الغير مرغوبة */
+    object-fit: cover; /* لتغطية المساحة بدون تشويه */
+    width: 100%;
+}
+.portfolio-view{
+    display: none;
+}
+/* fun-facts-area section */
+
+.fun-facts-area{
+    background-color: #F1F1F1;
+    padding: 100px 0 100px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.fun-facts-area .row{
+    margin: auto;
+    text-align: center;
+    margin: 25px 0 25px;
+}
+.fun-facts-area .row .single-fun-facts {
+    width: 25%;
+    float: left;
+    padding: 15px;
+    position: relative;
+}
+.fun-facts-area .row .single-fun-facts i{
+    font-size: 40px;
+    color: #ff305b;
+    margin-bottom: 20px;
+    display: block;
+}
+/*  */
+section{
+    margin-bottom: 50px;
+    text-align: center;
+}
+/*testimonial section  */
