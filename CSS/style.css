@@ -2,8 +2,15 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+/*  */
+h1, h2, h3, h4, h5, h6 {
+    margin: 0 0 10px;
+    line-height: 1.1;
     font-family: 'Poppins', sans-serif;
 }
+/*  */
 #home{
     width: 100%;
     height: 100vh;
@@ -11,6 +18,16 @@
     background-size: cover;
     background-position: center;
     position: relative;
+}
+
+#home::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* هنا بتحدد درجة التعتيم */
 }
 .header {
     position: fixed;
@@ -27,12 +44,13 @@
     margin-right: auto;
     margin-left: auto;
 }
-.header .container .row{
+.row{
     margin-right: -15px;
     margin-left: -15px;
 }
-.header .container .row span{
-    float: left;
+.header .container .row .navbar{
+    width: auto;
+    float: right;
 }
 .header .container .row .navbar ul{
     list-style: none;
@@ -45,8 +63,8 @@
 .header .container .row .navbar ul li a {
     text-decoration: none;
     color: #fff;
-    font-size: 18px;
-    font-weight: 500;
+    font-size: 16px;
+    font-weight: 300;
     transition: 0.5s;
 }
 .header .container .row .navbar ul li a:hover{
@@ -54,10 +72,299 @@
 }
 .header .container .row .logo{
     margin-right: 20px;
+    float: left;
+    width: 30%;
+    height: 100%;
+    position: relative;
+    top: -5px;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+
 }
 .header .container .row .logo a{
     text-decoration: none;
+    font-size: 24px;
+    font-weight: 800;
+    color: RGB(255, 48, 91);
+    vertical-align: top;
+    width: 25%;
+    height: 100%;
+    position: relative;
+
+}
+/* .slider-text{
+    z-index: 100;
+    position: relative;
+    margin: auto;
+    text-align: center;
+    vertical-align: middle;
+    height: 100vh;
+}
+
+
+.slider-text{
+    background-color: rgba(231, 29, 29, 0.5); 
+    padding: 20px;
+    border-radius: 10px; 
+    position: relative;
+
+    text-align: center;
+    vertical-align: middle;
+    display: table-cell;
     color: #fff;
-    font-size: 18px;
-    font-weight: 500;
+} */
+
+/* الطريقة الأولى: باستخدام Table */
+.slider-container {
+    display: table;
+    width: 100%;
+    height: 100vh; /* ارتفاع كامل للشاشة */
+
+
+}
+
+.slider-text {
+    display: table-cell;
+    vertical-align: middle; /* محاذاة عمودية */
+    z-index: 100;
+    position: relative;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    color: #fff;
+}
+.slider-text h3 {
+    font-size: 24px;
+    font-weight: 600;
+}
+.slider-text h1 {
+    font-size: 70px;
+    font-weight: 700;
+    color: #FF305B;
+    text-transform: uppercase;
+}
+.slider-text h4 , .slider-text b {
+    font-size: 26px;
+    font-weight: 300;
+    font-family: 'Poppins', sans-serif;
+    text-transform: capitalize; 
+}
+
+
+
+
+
+
+
+
+
+
+
+.slider-text h4 span {
+    position: relative;
+    display: inline-block;
+}
+
+.slider-text b {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s ease-in-out;
+    display: inline-block !important;
+}
+
+.slider-text b.is-visible {
+    opacity: 1;
+    visibility: visible;
+    position: relative;
+}
+
+.slider-text b::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -10px;
+    width: 2px;
+    height: 100%;
+    background-color: #fff;
+}
+/* Begin of the About Section */
+
+.about-area{
+    padding: 100px 0 125px;
+}
+
+.about-area .left{
+    width: 40%;
+    float: left;
+    padding-right: 100px;
+    margin-left: 100px;
+}
+.about-area .left .about-box{ 
+    border: #555555 8px solid;
+    border-radius: 5px;
+}
+.about-area .left .about-box .porfile-photo img{
+    transform: translate(5% , 5%);
+}
+.about-area .right{
+    width: 51%;
+    float: left;
+}
+.porfile-overly{
+    background: rgba(0, 0, 0, 0.57) none repeat scroll 0 0;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    bottom: 0;
+    height: 0;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: all 0.5s ease 0s;
+    transition: all 0.5s ease 0s;
+}
+.about-area .right h2{
+    
+font-size: 34px;
+line-height: 22px;
+margin: 0px 0px 25px;
+padding: 0px 0px 0px 13px;
+font-weight: 600;
+font-family: 'Poppins', sans-serif;
+padding: 0 0 0 13px;
+}
+.about-area .right p{
+color: RGB(85, 85, 85);
+background-color: rgba(0, 0, 0, 0);
+font-size:16px;
+line-height: 25px;
+margin: 0px 0px 25px;
+padding:0px 0px 25px;
+font-weight:400;
+text-decoration: none solid rgb(85, 85, 85);
+border-bottom: 1px dashed #999999;
+margin-bottom: 25px;
+padding-bottom: 25px;
+}
+.about-area .right ul li{
+    list-style: none;
+    width: 50%;
+    float: left;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+.about-area .right .download-cv-btn a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 300;
+    transition: 0.5s;
+    background-color: RGB(255, 48, 91);
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin:13px;
+}
+
+.about-area .right .download-cv-btn {
+    padding-right: 10px;
+    padding-top: 120px;
+
+}
+.clear::after {
+    content: "";
+    display: table;
+    clear: both;
+    /* إضافة هذه السطر لمنع المشاكل في بعض المتصفحات */
+    line-height: 0; 
+}
+
+
+/* our service section */
+.service-section{
+    line-height: 25px;
+    padding: 100px 0 54px;
+    background-color: #F1F1F1;
+}
+.service-section .upper {
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.service-section .upper .section-title{
+    text-align: center;
+    margin-bottom: 50px;
+    width: 100%;
+    position: relative;
+    height: 100%;
+}
+.service-section .upper .section-title ::after{
+    content: "";
+    background-color: #ff305b;
+    bottom: -25px;
+    height: 1px;
+    width: 160px;
+
+
+}
+.service-section .upper .section-title h2{
+    font-size: 40px;
+    line-height: 30px;
+    margin: 0px 0px 25px;
+    padding: 0px 0px 0px 13px;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    padding: 0 0 0 13px;
+    color: #333333;
+}
+
+
+
+.section-title h2:after, .section-title h2:before {
+    content: "";
+    left: 0;
+    margin: 0 auto;
+    position: absolute;
+    right: 0;
+}
+.section-title h2:before {
+    content: "";
+    border-color: #ff305b;
+    border-style: solid;
+    border-width: 1px 0;
+    bottom: -30px;
+    padding: 4px 0 5px;
+    width: 70px;
+}
+.service-section .lower {
+    padding: 0px 0px 0px 13px;
+    width: 100%;
+    position: relative;
+    height: 100%;
+    text-align: center;
+    padding-top: 50px;
+}
+.service-section .lower .single-service div{
+    width: 25%;
+    float: left;
+    padding: 0px 0px 0px 13px;
+    position: relative;
+    height: 100%;
+}
+.service-section .lower .single-service div i{
+    font-size: 40px;
+    color: #ff305b;
+    margin-bottom: 20px;
+    display: block;
+}
+.service-section .lower .single-service p{
+    font-size: 16px;
+    line-height: 25px;
+    margin: 0px 0px 25px;
+    padding: 0px 0px 25px;
+    font-weight: 400;
+    color: #555555;
 }
