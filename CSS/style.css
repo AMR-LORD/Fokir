@@ -447,8 +447,12 @@ padding-bottom: 25px;
     object-fit: cover; /* لتغطية المساحة بدون تشويه */
     width: 100%;
 }
-#portfolio-grid .portfolio-view ::before{
-    content: "";
+#portfolio-grid .portfolio-view{
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+}
+#portfolio-grid .layer{
     position: absolute;
     top: 0;
     left: 0;
@@ -456,11 +460,11 @@ padding-bottom: 25px;
     bottom: 0;
     visibility: hidden;
 }
-#portfolio-grid .portfolio :hover .portfolio-view ::before{
+#portfolio-grid .portfolio :hover .layer{
     background-color: rgba(0, 0, 0, 0.5);
     opacity: 1;
     visibility: visible;
-    transition: all 0.8s ease 0s;
+    transition: all 0.5s ease 0s;
 
 }
 /* fun-facts-area section */
