@@ -639,3 +639,13 @@ img {
     position: relative;
     display: inline-block;
 }
+.blog-area{
+    text-align: left;
+}
+.blog-area .single-blog{
+    width: 30%;
+    float: left;
+    padding: 15px;
+    position: relative;
+    height: 100%;
+}
