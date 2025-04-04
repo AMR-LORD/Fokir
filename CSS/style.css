@@ -643,15 +643,17 @@ img {
     text-align: left;
     background-color: #F1F1F1;
     margin: auto;
+    padding: 100px 0 100px;
 }
 .blog-area .row{
     margin: auto;
     margin: 25px 0px 25px 25px;    
 }
 .blog-area .single-blog{
-    width: 33.33333%;
+    width: calc(100% / 3 - 30px); /* 3 عناصر في صف واحد مع مساحة بينهما */
     float: left;
-    padding: 15px;
+    margin-left: 15px;
     position: relative;
     height: 100%;
+    background-color: white;
 }
