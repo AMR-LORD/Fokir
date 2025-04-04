@@ -815,13 +815,13 @@ textarea.form-control {
 
 .btn-send {
     display: block; /* الزر ياخد سطر لوحده */
-    background-color: #ff5e62 !important; /* لون وردي زي الصورة */
+    background-color: #ff5e62 ; /* لون وردي زي الصورة */
     color: #fff;
     padding: 12px 30px;
     font-size: 16px;
     font-weight: bold;
     border: none;
-    border-radius: 25px; /* زوايا دائرية */
+    border-radius: 5px; /* زوايا دائرية */
     cursor: pointer;
     transition: background-color 0.3s ease;
     text-transform: uppercase; /* علشان النص يبقى كابيتال زي الصورة */
@@ -831,14 +831,5 @@ textarea.form-control {
     background-color: #e05559; /* لون أغمق شوية عند الـ hover */
 }
 
-/* إزالة أي تأثيرات افتراضية من الـ btn-success */
-.btn-success {
-    background-color: transparent;
-    border: none;
-}
 
-/* إزالة تأثير الـ disabled لو مش عايزاه */
-.btn-send.disabled {
-    opacity: 1; /* علشان الزر يفضل ظاهر حتى لو disabled */
-    cursor: not-allowed;
-}
+
