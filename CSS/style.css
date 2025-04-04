@@ -450,7 +450,10 @@ padding-bottom: 25px;
 #portfolio-grid .portfolio-view{
     visibility: hidden;
     position: absolute;
-    top: 0;
+    color: #ff305b;
+    font-size: 25px;
+    bottom: 30px;
+    right: 30px;
 }
 #portfolio-grid .layer{
     position: absolute;
@@ -465,7 +468,11 @@ padding-bottom: 25px;
     opacity: 1;
     visibility: visible;
     transition: all 0.5s ease 0s;
+}
+#portfolio-grid .portfolio :hover .portfolio-view{
 
+    visibility: visible;
+    transition: all 0.5s ease 0s;
 }
 /* fun-facts-area section */
 
