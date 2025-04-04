@@ -375,7 +375,6 @@
             </div><!--/.row-->
         </div><!--/.container-->
     </section>
-    
     <!-- blog section -->
 
     <section class="blog-area clear" id="blog">
@@ -401,9 +400,10 @@
                     </div>
                 </div>
                 <div class="single-blog">
-                    <div class="post-thumbnail embed-responsive embed-responsive-16by9">
-                        <iframe 
-                            src="https://www.youtube.com/embed/uVju5--RqtY?feature=oembed"></iframe>
+                    <div class="post-thumbnail">
+                        <div class="video-wrapper">
+                            <iframe src="https://www.youtube.com/embed/uVju5--RqtY?feature=oembed"></iframe>
+                        </div>
                     </div>
                     <div class="post-content">
                         <div class="post-meta"> 20 April, 2018</div>
@@ -435,54 +435,46 @@
     <section class="contact-area" id="contact">
         <div class="container">
             <div class="row">
-                <div class="col-md-12">
-                    <div class="section-title text-center">
-                        <h2>Contact Us</h2>
-                    </div>
+                <div class="section-title text-center">
+                    <h2>Contact Us</h2>
                 </div>
             </div><!--/.row-->
             <div class="row">
-                <div class="col-md-8 col-md-offset-2">
-                    <div class="contact-from">
-                        <form action="http://coprimesoft.com/themeforest-projects/fokir-preview/fokir/contact.php" method="post" id="contact-form" novalidate="true">
-                            <div class="messages"></div>
-                            <div class="controls">
-                                <div class="row">
-                                    <div class="col-md-6 col-sm-6 col-xs-12">
-                                        <div class="form-group">
-                                            <input type="text" data-error="Firstname is required." required="required" placeholder="Name" class="form-control" name="name" id="form_name">
-                                            <div class="help-block with-errors"></div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 col-sm-6 col-xs-12">
-                                        <div class="form-group">
-                                            <input type="email" data-error="Valid email is required." required="required" placeholder="Email" class="form-control" name="email" id="form_email">
-                                            <div class="help-block with-errors"></div>
-                                        </div>
-                                    </div>
+                <div class="contact-from">
+                    <form action="http://coprimesoft.com/themeforest-projects/fokir-preview/fokir/contact.php"
+                        method="post" id="contact-form" novalidate="true">
+                        <div class="messages"></div>
+                        <div class="controls">
+                            <div class="row">
+                                <div class="form-group">
+                                    <input type="text" data-error="Firstname is required." required="required"
+                                        placeholder="Name" class="form-control" name="name" id="form_name">
+                                    <div class="help-block with-errors"></div>
                                 </div>
-                                <div class="row">
-                                    <div class="col-md-12 col-sm-12 col-xs-12">
-                                        <div class="form-group">
-                                            <input type="text" data-error="Subject is required." required="required" placeholder="Subject" class="form-control" name="Subject" id="form_Subject">
-                                            <div class="help-block with-errors"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-12 col-sm-12 col-xs-12">
-                                        <div class="form-group">
-                                            <textarea data-error="Please,leave us a message." required="required" rows="4" placeholder="Message for me" class="form-control" name="message" id="form_message"></textarea>
-                                            <div class="help-block with-errors"></div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-12  col-sm-12 col-xs-12">
-                                        <input type="submit" value="Send message" class="btn btn-success btn-send disabled">
-                                    </div>
+                                <div class="form-group">
+                                    <input type="email" data-error="Valid email is required." required="required"
+                                        placeholder="Email" class="form-control" name="email" id="form_email">
+                                    <div class="help-block with-errors"></div>
                                 </div>
                             </div>
-                        </form>
-                    </div>
+                            <div class="row">
+                                <div class="form-group">
+                                    <input type="text" data-error="Subject is required." required="required"
+                                        placeholder="Subject" class="form-control" name="Subject" id="form_Subject">
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group">
+                                    <textarea data-error="Please,leave us a message." required="required" rows="4"
+                                        placeholder="Message for me" class="form-control" name="message"
+                                        id="form_message"></textarea>
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                                <input type="submit" value="Send message" class="btn btn-success btn-send disabled">
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div><!--/.row-->
         </div><!--/.container-->

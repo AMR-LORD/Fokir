@@ -701,3 +701,144 @@ img {
     padding: 10px 20px;
     margin-top: 13px;
 }
+
+.post-thumbnail {
+    width: 100%; /* العرض بتاع الـ container بتاعك */
+    max-width: 400px; /* أو أي قيمة متساوية مع الصور التانية */
+    height: 225px; /* أو أي ارتفاع متساوي مع الصور التانية */
+    overflow: hidden; /* لو فيه أي حاجة زيادة تتخفي */
+}
+
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 9/16 = 0.5625 (نسبة 16:9) */
+    height: 0;
+    overflow: hidden;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+
+
+/* contact section */
+/* تنسيق عام للـ section */
+.contact-area {
+    padding: 50px 0;
+    background-color: #f9f9f9; /* خلفية فاتحة زي الصورة */
+}
+
+/* تنسيق العنوان */
+.section-title {
+    margin-bottom: 40px;
+}
+
+.section-title h2 {
+    font-size: 32px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* تنسيق النموذج */
+.contact-from {
+    max-width: 800px; /* عرض النموذج */
+    margin: 0 auto; /* لتوسيط النموذج */
+}
+
+/* تنسيق الـ row اللي فيها Name و Email */
+.controls .row:first-child {
+    overflow: hidden; /* للتعامل مع الـ float */
+}
+
+.controls .row:first-child .form-group {
+    float: left; /* خلي الحقول جنب بعض */
+    width: calc(50% - 10px); /* نص العرض مع مراعاة المسافة */
+    margin-right: 20px; /* المسافة بين الحقول */
+}
+
+.controls .row:first-child .form-group:last-child {
+    margin-right: 0; /* آخر حقل ما ياخدش margin من اليمين */
+}
+
+/* تنسيق باقي الـ rows (Subject و Message) */
+.controls .row:not(:first-child) .form-group {
+    display: block; /* كل حقل ياخد السطر كله */
+    width: 100%;
+}
+
+/* تنسيق الحقول (Inputs و Textarea) */
+.form-control {
+    display: block; /* الحقول تاخد السطر كله داخل الـ form-group */
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 16px;
+    color: #333;
+    background-color: #fff;
+    border: 1px solid #ddd; /* حدود خفيفة */
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #ff5e62; /* لون الحدود عند التركيز (وردي زي الزر) */
+    box-shadow: none;
+}
+
+/* تنسيق الـ placeholder */
+.form-control::placeholder {
+    color: #aaa; /* لون الـ placeholder خفيف */
+    font-size: 16px;
+}
+
+/* تنسيق الـ textarea */
+textarea.form-control {
+    resize: none; /* منع تغيير حجم الـ textarea */
+    height: 120px; /* ارتفاع الـ textarea */
+}
+
+/* تنسيق الـ form-group */
+.form-group {
+    margin-bottom: 20px; /* المسافة بين الحقول */
+}
+
+/* تنسيق الزر */
+.controls .row:last-child {
+    overflow: hidden; /* للتعامل مع الـ float */
+}
+
+.btn-send {
+    display: block; /* الزر ياخد سطر لوحده */
+    background-color: #ff5e62 !important; /* لون وردي زي الصورة */
+    color: #fff;
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 25px; /* زوايا دائرية */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-transform: uppercase; /* علشان النص يبقى كابيتال زي الصورة */
+}
+
+.btn-send:hover {
+    background-color: #e05559; /* لون أغمق شوية عند الـ hover */
+}
+
+/* إزالة أي تأثيرات افتراضية من الـ btn-success */
+.btn-success {
+    background-color: transparent;
+    border: none;
+}
+
+/* إزالة تأثير الـ disabled لو مش عايزاه */
+.btn-send.disabled {
+    opacity: 1; /* علشان الزر يفضل ظاهر حتى لو disabled */
+    cursor: not-allowed;
+}
