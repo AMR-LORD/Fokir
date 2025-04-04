@@ -641,9 +641,15 @@ img {
 }
 .blog-area{
     text-align: left;
+    background-color: #F1F1F1;
+    margin: auto;
+}
+.blog-area .row{
+    margin: auto;
+    margin: 25px 0px 25px 25px;    
 }
 .blog-area .single-blog{
-    width: 30%;
+    width: 33.33333%;
     float: left;
     padding: 15px;
     position: relative;
