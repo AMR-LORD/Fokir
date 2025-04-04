@@ -471,3 +471,37 @@ section{
     text-align: center;
 }
 /*testimonial section  */
+
+.testimonel-img {
+    border-radius: 50%;
+    float: left;
+    margin: 12px auto;
+    overflow: hidden;
+    position: relative;
+    width: 110px;
+    z-index: 999;
+}
+.owl-carousel .owl-item img {
+    display: block;
+    width: 100%;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+.testimonel-item{
+    width: 750px;
+    height: 300px;
+    text-align: left;
+    background-color: #F1F1F1;
+    margin: auto;
+}
+.testimonel-item a{
+    color: #777777;
+    font-size: 15px;
+    font-weight: 400;
+    transition: 0.5s;
+    line-height:16.5px;
+    font-family: poppins ,'sans-serif';
+}
