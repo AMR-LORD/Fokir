@@ -447,8 +447,21 @@ padding-bottom: 25px;
     object-fit: cover; /* لتغطية المساحة بدون تشويه */
     width: 100%;
 }
-.portfolio-view{
-    display: none;
+#portfolio-grid .portfolio-view ::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    visibility: hidden;
+}
+#portfolio-grid .portfolio :hover .portfolio-view ::before{
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.8s ease 0s;
+
 }
 /* fun-facts-area section */
 
