@@ -94,6 +94,10 @@ h1, h2, h3, h4, h5, h6 {
     position: relative;
 
 }
+.header.scrolled {
+    background-color: #333333;
+    transition: all 0.3s ease-in-out;
+}
 /* .slider-text{
     z-index: 100;
     position: relative;
