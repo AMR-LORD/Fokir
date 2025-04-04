@@ -647,13 +647,57 @@ img {
 }
 .blog-area .row{
     margin: auto;
-    margin: 25px 0px 25px 25px;    
 }
 .blog-area .single-blog{
-    width: calc(100% / 3 - 30px); /* 3 عناصر في صف واحد مع مساحة بينهما */
+    width: calc(100% / 3 - 25px); /* 3 عناصر في صف واحد مع مساحة بينهما */
     float: left;
-    margin-left: 15px;
+    margin-left: 25px;
     position: relative;
     height: 100%;
     background-color: white;
+}
+.blog-area .post-content{
+    padding: 20px;
+    position: relative;
+    height: 100%;
+    text-align: left;
+}
+.blog-area .single-blog .post-meta{
+    color:#555555;
+    font-size: 16px;
+    line-height: 25px;
+    font-weight: 400;
+    margin: 0px 0px 10px;
+}
+.blog-area .single-blog h3{
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+.blog-area .single-blog h3 a{
+    text-decoration: none;
+    color: #333333;
+    font-size: 20px;
+    font-weight: 600;
+    transition: 0.5s;
+    line-height: 22px;
+}
+.blog-area .single-blog h3 a:hover{
+    color: RGB(255, 48, 91);
+}
+.blog-area .single-blog p{
+    font-size: 16px;
+    line-height: 25px;
+    margin: 0px 0px 25px;
+    padding: 0px 0px 25px;
+    font-weight: 400;
+    color: #555555;
+}
+.blog-area .single-blog .post-read a{
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    font-weight: 400;
+    transition: 0.5s;
+    padding: 10px 20px;
+    margin-top: 13px;
 }
