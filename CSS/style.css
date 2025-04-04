@@ -551,7 +551,7 @@ img {
     background-color: #F1F1F1;
     margin: 0 auto; /* Center horizontally */
     display: table; /* Treat the item as a table */
-
+    position: relative;
     padding: 30px 60px;
 }
 .testimonel-cont{
@@ -576,7 +576,7 @@ img {
 
 #testimonial .row:nth-child(2) {
     height: 300px;
-    background-color: #FF305B;
+    background-color: white;
     color: #000;
     display: table; /* Treat the row as a table to allow table-cell behavior */
     width: 100%; /* Ensure the row takes full width */
@@ -591,18 +591,22 @@ img {
     line-height: 16.5px;
     font-family: poppins, 'sans-serif';
 }
+/* Create a right-angle triangle using ::after */
+.testimonel-item::after {
+    content: ''; /* Required for pseudo-elements */
+    position: absolute;
+    width: 0; /* Set width to 0 for the border trick */
+    height: 0; /* Set height to 0 for the border trick */
+    border-top: 100px solid #FF305B; /* Top border creates the vertical leg of the triangle */
+    border-left: 100px solid #FF305B; /* Left border creates the hypotenuse */
+    border-right: 100px solid transparent; /* Right border creates the horizontal leg of the triangle */
+    border-bottom: 100px solid transparent;
+    top: 0; /* Position at the top-right corner */
+    left: 0; /* Position at the top-right corner */
+    z-index: 888; /* Place it behind the content */
+}
+
 .review-reating i{
     color:#F1C30D;
 }
 
-.testimonel-item::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 5px;
-    background-color: #FF305B;
-    border-radius: 5px;
-
-}
