@@ -131,7 +131,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .slider-text {
     display: table-cell;
-    vertical-align: middle; /* محاذاة عمودية */
+    vertical-align: middle;
     z-index: 100;
     position: relative;
     padding: 20px;
@@ -139,44 +139,42 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
     color: #fff;
 }
+
 .slider-text h3 {
     font-size: 24px;
     font-weight: 600;
 }
+
 .slider-text h1 {
     font-size: 70px;
     font-weight: 700;
     color: #FF305B;
     text-transform: uppercase;
 }
-.slider-text h4 , .slider-text b {
+
+.slider-text h4 {
     font-size: 26px;
     font-weight: 300;
     font-family: 'Poppins', sans-serif;
-    text-transform: capitalize; 
+    text-transform: capitalize;
 }
 
-
-
-
-
-
-
-
-
-
-
-.slider-text h4 span {
+.slider-text .typing-wrapper {
     position: relative;
     display: inline-block;
 }
 
 .slider-text b {
-    position: absolute;
+    font-size: 26px;
+    font-weight: 300;
+    font-family: 'Poppins', sans-serif;
+    text-transform: capitalize;
     opacity: 0;
     visibility: hidden;
-    transition: all 0.5s ease-in-out;
-    display: inline-block !important;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 0.3s ease-in-out;
 }
 
 .slider-text b.is-visible {
@@ -185,15 +183,22 @@ h1, h2, h3, h4, h5, h6 {
     position: relative;
 }
 
-.slider-text b::after {
-    content: '';
+/* تأثير الكورسر */
+.slider-text .typing-wrapper::after {
+    content: '|';
     position: absolute;
-    top: 0;
     right: -10px;
-    width: 2px;
-    height: 100%;
-    background-color: #fff;
+    top: 0;
+    color: #fff;
+    font-size: 26px;
+    animation: blink 0.7s infinite;
 }
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
 /* Begin of the About Section */
 
 .about-area{
