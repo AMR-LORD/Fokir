@@ -262,6 +262,10 @@ padding-bottom: 25px;
     padding-left: 20px;
     position: relative;
 }
+.about-area a{
+    text-decoration: none;
+    color: RGB(126, 126, 126);
+}
 .about-area .right .download-cv-btn a{
     text-decoration: none;
     color: #fff;
