@@ -833,3 +833,37 @@ textarea.form-control {
 
 
 
+/* footer section */
+
+.footer-area{
+    background-color: #333333;
+    padding: 50px 0;
+    color: #fff;
+    text-align: center;
+}
+.footer-area ul {
+    list-style: none;
+    padding: 0;
+    margin: 15px;
+
+}
+.footer-area ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.footer-area ul li i {
+    color: white;
+    transition: 0.5s;
+}
+
+.footer-area ul li i:hover {
+    color: #ff305b;
+}
+.footer-area .copy-right a{
+    text-decoration: none;
+    color: #ff305b;
+    font-size: 16px;
+    font-weight: 300;
+    transition: 0.5s;
+}
