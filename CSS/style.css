@@ -470,8 +470,9 @@ section{
     margin-bottom: 50px;
     text-align: center;
 }
-/*testimonial section  */
 
+/*testimonial section  */
+/* 
 .testimonel-img {
     border-radius: 50%;
     float: left;
@@ -492,10 +493,21 @@ img {
 }
 .testimonel-item{
     width: 750px;
-    height: 300px;
     text-align: left;
     background-color: #F1F1F1;
     margin: auto;
+    vertical-align: middle;
+    position: relative;
+
+}
+.testimonel-carousel{
+    vertical-align: middle;
+    margin: auto;
+}
+#testimonial .row:nth-child(2) {
+    height: 300px;
+    background-color: #FF305B;
+    color: #000;
 }
 .testimonel-item a{
     color: #777777;
@@ -504,4 +516,93 @@ img {
     transition: 0.5s;
     line-height:16.5px;
     font-family: poppins ,'sans-serif';
+} */
+
+
+/* testimonial section  */
+/* testimonial section  */
+
+.testimonel-img {
+    border-radius: 50%;
+    float: left;
+    margin: 12px auto;
+    overflow: hidden;
+    position: relative;
+    width: 110px;
+    z-index: 999;
+    
+}
+
+.owl-carousel .owl-item img {
+    display: block;
+    width: 100%;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.testimonel-item {
+    width: 750px;
+    border-radius: 5px;
+    text-align: left;
+    height: 275px;
+    background-color: #F1F1F1;
+    margin: 0 auto; /* Center horizontally */
+    display: table; /* Treat the item as a table */
+
+    padding: 30px 60px;
+}
+.testimonel-cont{
+    margin-left: 120px;
+}
+.testimonel-cont p{
+    font-size: 16px;
+    line-height: 25px;
+    margin: 0px 0px 25px;
+    padding: 0px 0px 25px;
+    font-weight: 400;
+    color: #555555;
+}
+
+.testimonel-carousel {
+    display: table-cell; /* Treat the carousel as a table cell */
+    vertical-align: middle; /* Vertically center the content */
+    text-align: center; /* Horizontally center the child */
+    height: 300px; /* Match the height of the parent row */
+    width: 100%; /* Ensure it takes the full width of the parent */
+}
+
+#testimonial .row:nth-child(2) {
+    height: 300px;
+    background-color: #FF305B;
+    color: #000;
+    display: table; /* Treat the row as a table to allow table-cell behavior */
+    width: 100%; /* Ensure the row takes full width */
+}
+
+.testimonel-item a {
+    text-decoration: none;
+    color: #777777;
+    font-size: 15px;
+    font-weight: 400;
+    transition: 0.5s;
+    line-height: 16.5px;
+    font-family: poppins, 'sans-serif';
+}
+.review-reating i{
+    color:#F1C30D;
+}
+
+.testimonel-item::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: #FF305B;
+    border-radius: 5px;
+
 }
